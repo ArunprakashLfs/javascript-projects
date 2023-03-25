@@ -10,15 +10,24 @@ const outputEl = document.getElementById("task-items");
 
 //create an array for storage
 let arrayValue = [];
+console.log(arrayValue);
 
 //function
 function addValue(){
     detailsObject()
     outputEl.innerHTML ="";
-    arrayValue.forEach((list) => {
-        let {name, task, time} = list;
+    arrayValue.forEach((tasklist) => {
+        let {nameEl, taskEl, timeEl} = tasklist;
+        outputEl.innerHTML= `
+        <span>${nameEl}</span>
+        <span>${taskEl}</span>
+        <span>${timeEl}</span>
+        <button onclick="deletevalue(${tasklist.id})">delete</button>
+        <button onclick ="editValue(${tasklist.id})">edit</button>
+        `
+
         
-    })
+    });
 }
 function detailsObject(){
     let tasklist={
@@ -27,6 +36,11 @@ function detailsObject(){
         taskEl: taskEl.value,
         timeEl: timeEl.value,
     }
+    arrayValue.push(tasklist);
+    // addValue(tasklist);
+}
+function uniqueid() {
+    return Math.floor(Math.random()*100000);
 }
 
 
