@@ -15,6 +15,9 @@ const outputEl = document.getElementById("task-items");
 //add EventListners
 formEl.addEventListener("submit", function(e){
     e.preventDefault();
+    console.log(nameEl.value);
+    console.log(taskEl.value);
+    console.log(timeEl.value);
 })
 
 
