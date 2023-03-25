@@ -8,6 +8,26 @@ const formEl = document.getElementById("form");
 //displaying output 
 const outputEl = document.getElementById("task-items");
 
+//create an array for storage
+let arrayValue = [];
+
+//function
+function addValue(){
+    detailsObject()
+    outputEl.innerHTML ="";
+    arrayValue.forEach((list) => {
+        let {name, task, time} = list;
+        
+    })
+}
+function detailsObject(){
+    let tasklist={
+        id: uniqueid(),
+        nameEl: nameEl.value,
+        taskEl: taskEl.value,
+        timeEl: timeEl.value,
+    }
+}
 
 
 
@@ -18,6 +38,7 @@ formEl.addEventListener("submit", function(e){
     console.log(nameEl.value);
     console.log(taskEl.value);
     console.log(timeEl.value);
+    addValue();
 })
 
 
