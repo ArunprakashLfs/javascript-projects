@@ -14,7 +14,6 @@ console.log(arrayValue);
 
 //function
 function addValue(){
-    detailsObject()
     outputEl.innerHTML ="";
     arrayValue.forEach((tasklist) => {
         let {nameEl, taskEl, timeEl} = tasklist;
@@ -30,13 +29,19 @@ function addValue(){
     });
 }
 function detailsObject(){
-    let tasklist={
+    if(nameEl.value ==""||taskEl.value=="" ||timeEl == ""){
+        alert("EnterValue")
+    }else{ let tasklist={
         id: uniqueid(),
         nameEl: nameEl.value,
         taskEl: taskEl.value,
         timeEl: timeEl.value,
     }
     arrayValue.push(tasklist);
+    addValue();
+
+    }
+   
     // addValue(tasklist);
 }
 function uniqueid() {
@@ -52,7 +57,8 @@ formEl.addEventListener("submit", function(e){
     console.log(nameEl.value);
     console.log(taskEl.value);
     console.log(timeEl.value);
-    addValue();
+   
+    detailsObject();
 })
 
 
