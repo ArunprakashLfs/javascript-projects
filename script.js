@@ -9,3 +9,12 @@ const formEl = document.getElementById("form");
 const outputEl = document.getElementById("task-items");
 
 
+
+
+
+//add EventListners
+formEl.addEventListener("submit", function(e){
+    e.preventDefault();
+})
+
+
