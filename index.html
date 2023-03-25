@@ -8,26 +8,28 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <form  class="form" id="form">
-        <div class="form-control">
-            <label for="input-Name">Enter your Name</label>
-            <input type="text" id="input-Name" class="input-Name" placeholder="EnterName">
+    <main class="card">
+        <form  class="form" id="form">
+            <div class="form-control">
+                <label for="input-Name">Enter your Name</label>
+                <input type="text" id="input-Name" class="input-Name" placeholder="EnterName">
+            </div>
+            <div class="form-control">
+                <label for="input-task">Enter your task</label>
+                <input type="text" id="input-task" class="input-task" placeholder="EnterTask">
+            </div>
+            <div class="form-control">
+                <label for="input-time">Enter your time</label>
+                <input type="time" id="input-time" class="input-time">
+            </div>
+            <button id="submit" class="submit">submit</button>
+        </form>
+        <div id="output" class="output">
+            <ul class="task-items" id="task-items">
+                
+            </ul>
         </div>
-        <div class="form-control">
-            <label for="input-task">Enter your task</label>
-            <input type="text" id="input-task" class="input-task" placeholder="EnterTask">
-        </div>
-        <div class="form-control">
-            <label for="input-time">Enter your time</label>
-            <input type="time" id="input-time" class="input-time">
-        </div>
-        <button id="submit" class="submit">submit</button>
-    </form>
-    <div>
-        <ul class="task-items" id="task-items">
-            
-        </ul>
-    </div>
+    </main>
     <script src="./script.js"></script>
 </body>
 </html>
