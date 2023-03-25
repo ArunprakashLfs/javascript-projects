@@ -14,18 +14,18 @@ console.log(arrayValue);
 
 //function
 function addValue(){
-    outputEl.innerHTML ="";
+    let outputList = document.createElement("li");
+
     arrayValue.forEach((tasklist) => {
         let {nameEl, taskEl, timeEl} = tasklist;
-        outputEl.innerHTML= `
+        outputList.innerHTML= `
         <span>${nameEl}</span>
         <span>${taskEl}</span>
         <span>${timeEl}</span>
         <button onclick="deletevalue(${tasklist.id})">delete</button>
         <button onclick ="editValue(${tasklist.id})">edit</button>
         `
-
-        
+        outputEl.appendChild(outputList);
     });
 }
 function detailsObject(){
